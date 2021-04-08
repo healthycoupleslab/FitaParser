@@ -69,7 +69,7 @@ Before starting on the steps below, you will need to create an excel database to
 
 #### STEP 4: GENERATE AUTHORIZATION URL LINK IN FITBIT APP
 
->*NOTE. Please Fitbit's https://dev.fitbit.com/build/reference/web-api/oauth2/ website for additional information on the user authorization and API authentication process.
+>*NOTE. Please see Fitbit's https://dev.fitbit.com/build/reference/web-api/oauth2/ website for additional information on the user authorization and API authentication process.
 
 1. Go to dev.fitbit.com.<br />
 2. Log into the account under which your Fitbit app is registered (aka: administrator account).<br />
@@ -88,7 +88,7 @@ Before starting on the steps below, you will need to create an excel database to
 
 ![Example authorization URL link](C:\Users\sydne\OneDrive\Documents\FitaParser\authorization URL.PNG "Example authorization URL link")
 
-*When completing the STEP 5, ensure that you are logged OUT of your administrator Fitbit account. Also ensure that no one else is logged into Fitbit. We found it helpful to work in two separate browsers when switching between accounts.<br />
+*Before completing STEP 5, ensure that you are logged OUT of your administrator Fitbit account. Also ensure that no one else is logged into Fitbit. We found it helpful to work in two separate browsers when switching between accounts.<br />
 
 #### STEP 5: IMPLEMENT PARTICIPANT USER CONSENT TO FITBIT APP
 
@@ -96,9 +96,9 @@ Before starting on the steps below, you will need to create an excel database to
 2. Log into the Fitbit user/participant's account.<br />
 
 >*NOTE. You will need the username and password for this step. The protocol for securing this information from your participants may vary based on several factors. Some questions to consider when designing your protocol...<br />
-    Are you providing Fitbit devices to your participants? If so, will the research team be setting up the device and account information for participants? Or will participants set up their own devices/accounts? Are you including individuals who already own a Fitbit device (and thus have an existing Fitbit account)?<br />
-        -If the research team is setting up the devices/accounts, then you will be able to set the username, password, and user settings from the beginning which allows for greater control over access to the user data. You will obviously want to maintain this information in a secured, encrypted location.<br />
-        -If participants are setting up their own devices/accounts, you will need to secure their login credentials and request that they not change this information during their time in the study. This also applied to participants who are allowed to use their existing devices/accounts.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Are you providing Fitbit devices to your participants? If so, will the research team be setting up the device and account information for participants? Or will participants set up their own devices/accounts? Are you including individuals who already own a Fitbit device (and thus have an existing Fitbit account)?<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-If the research team is setting up the devices/accounts, then you will be able to set the username, password, and user settings from the beginning which allows for greater control over access to the user data. You will obviously want to maintain this information in a secured, encrypted location.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-If participants are setting up their own devices/accounts, you will need to secure their login credentials and request that they not change this information during their time in the study. This also applied to participants who are allowed to use their existing devices/accounts.<br />
 *NOTE. Regardless of which protocol you use to secure your participants' login credentials, you will need to make sure you outline the requirements for providing login credentials, as well as how you will keep that information safe very clear on your participant consent form.<br />
 
 3. Return to where you pasted the authorization URL for this specific participant in your Fitbit User Access Token Database.<br />
