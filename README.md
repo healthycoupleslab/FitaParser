@@ -31,11 +31,11 @@ Below are detailed instructions on how to execute the entire workflow. Please no
 
 The first phase of the workflow is to generate the data source that the FitaParser pipeline (described in Phase 2 below) will pull from to generate your final data/output. In this workflow, the data source, itself, is your participant's raw Fitbit data. However, Fitbit user data is protected information that the Fitaparser pipeline cannot readily access. In order to connect the FitaParser pipeline to your data source, you must first register an app for your project using Fitbit's developer API platform that will act as a mediator for FitaParser to access individual user data.<br />
 
-###STEP 1: REGISTER YOUR PROJECT FITBIT APP
+### STEP 1: REGISTER YOUR PROJECT FITBIT APP
 
 1.1. Before you register your project app, you will need to set up a Fitbit user account (free). We used one of our team member's existing Fitbit accounts.<br />
 \
-*NOTE. See Fitbit's Web API website for a helpful reference for additional information regarding their developer API and SDK. https://dev.fitbit.com/build/reference/web-api/ <br />
+'*NOTE. See Fitbit's Web API website for a helpful reference for additional information regarding their developer API and SDK. https://dev.fitbit.com/build/reference/web-api/'
 \
 1.2. Once you have a Fitbit account set up, go to dev.fitbit.com and log in to that account.<br />
 1.3. Go to the Register an App tab.<br />
