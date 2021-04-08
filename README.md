@@ -27,6 +27,11 @@ Broadly, the FitaParser workflow is a 2-phase process (see infographic below). T
 
 Below are detailed instructions on how to execute the entire workflow. Please note that while the development of this workflow was made possible by one of our team members with background in computer science and bioinformatics, the purpose and application was driven by our work as behavioral health researchers; thus, the instructions that follow are written largely from that perspective with special consideration to potential challenges faced by behavioral and social science researchers. Throughout the workflow instructions, we have also included our additional thoughts and tips that may be helpful for some researchers who- like ourselves at the beginning of this project- are new to conducting research with consumer wearable devices. We welcome feedback on this tool to help improve usability- please feel free to provide constructive suggestions or inform us of issues encountered when utilizing FitaParser by dropping a comment under the Issues tab.<br />
 
+As we hope this will be an attractive tool for a broad research audience, we are also currently preparing a manuscript outlining the methodology of The FitaParser Workflow in order to more widely disseminate this tool amongst the research community. We plan to upload the preprint version to medRxiv for feedback in the near future and will link page below.
+
+medRxiv Preprint Link: [coming soon]
+
+
 ## Phase 1: Generate User Database
 
 The first phase of the workflow is to generate the data source that the FitaParser pipeline (described in Phase 2 below) will pull from to generate your final data/output. In this workflow, the data source, itself, is your participant's raw Fitbit data. However, Fitbit user data is protected information that the Fitaparser pipeline cannot readily access. In order to connect the FitaParser pipeline to your data source, you must first register an app for your project using Fitbit's developer API platform that will act as a mediator for FitaParser to access individual user data.<br />
