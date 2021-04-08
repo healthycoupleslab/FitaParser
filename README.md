@@ -34,9 +34,9 @@ The first phase of the workflow is to generate the data source that the FitaPars
 ### STEP 1: REGISTER YOUR PROJECT FITBIT APP
 
 1. Before you register your project app, you will need to set up a Fitbit user account (free). We used one of our team member's existing Fitbit accounts.<br />
-\
-'*NOTE. See Fitbit's Web API website for a helpful reference for additional information regarding their developer API and SDK. https://dev.fitbit.com/build/reference/web-api/'
-\
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*NOTE. See Fitbit's Web API website for a helpful reference for additional information regarding their developer API and SDK. https://dev.fitbit.com/build/reference/web-api/ <br />
+
 2. Once you have a Fitbit account set up, go to dev.fitbit.com and log in to that account.<br />
 3. Go to the Register an App tab.<br />
 4. Fill in the online form for your project app (see screenshot of our completed form below).<br />
