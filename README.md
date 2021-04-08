@@ -5,9 +5,13 @@
 The FitaParser Workflow is an open-source data-analysis pipeline built using the workflow management system Snakemake, designed to provide an affordable data aggregation method that significantly expedites the retrieval of longitudinal multi-user Fitbit data. To our knowledge, the only other current options for retrieval and aggregation of longitudinal, multi-user Fitbit data are 1) to pay potentially prohibitive fees to expensive third-party companies to manage this process for you, or 2) spend countless hours manually downloading data from individual participants and aggregating it into a usable format. Depending on the number of participants, metrics gathered, and length of time data was collected, the time needed to do this could also be prohibitive. An additional drawback of the latter (i.e., manual) approach is that Fitbit does not automatically calculate a daily wear time or MPVA-equivalent variable, both of which are standard metrics reported in physical activity research. Beyond the limitations of the existing data aggregation methods, there appear to be no published standards or guidelines instructing physical activity researchers on how to approach the overall collection, retrieval, and aggregation process of multi-user Fitbit data. As in our case, we spent many hours and resources figuring out a process that many previous researchers have likely had to learn before us. While not comprehensive by any means, we hope that this tool can serve as an informative and useful guide for others wishing to utilize Fitbits in their research.
 
 The FitaParser pipeline is capable of producing data that is customizable to your output needs.
+
   -Individual or aggregate data files.
+
   -Daily or intra-day level data.
+
   -Summary graphics of data.
+
   -Output files aggregate all available Fitbit metrics:
 
       Activity Types (+MVPA)​
@@ -63,6 +67,7 @@ Before starting on the steps below, you will need to create an excel database to
 *After your project app is registered and confirmed access to users' intraday data, and your Fitbit User Access Token Database is created, you can then move on to Steps 4-6.
 
 STEP 4: GENERATE AUTHORIZATION URL LINK IN FITBIT APP
+*NOTE. Please Fitbit's https://dev.fitbit.com/build/reference/web-api/oauth2/ website for additional information on the user authorization and API authentication process.
 4.1.Go to dev.fitbit.com.
 4.2.Log into the account under which your Fitbit app is registered (aka: administrator account).
 4.3.Go to Manage > Register an App > Manage My Apps > select your project app.
