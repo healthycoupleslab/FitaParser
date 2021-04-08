@@ -4,15 +4,11 @@
 
 The FitaParser Workflow is an open-source data-analysis pipeline built using the workflow management system Snakemake, designed to provide an affordable data aggregation method that significantly expedites the retrieval of longitudinal multi-user Fitbit data. To our knowledge, the only other current options for retrieval and aggregation of longitudinal, multi-user Fitbit data are 1) to pay potentially prohibitive fees to expensive third-party companies to manage this process for you, or 2) spend countless hours manually downloading data from individual participants and aggregating it into a usable format. Depending on the number of participants, metrics gathered, and length of time data was collected, the time needed to do this could also be prohibitive. An additional drawback of the latter (i.e., manual) approach is that Fitbit does not automatically calculate a daily wear time or MPVA-equivalent variable, both of which are standard metrics reported in physical activity research. Beyond the limitations of the existing data aggregation methods, there appear to be no published standards or guidelines instructing physical activity researchers on how to approach the overall collection, retrieval, and aggregation process of multi-user Fitbit data. As in our case, we spent many hours and resources figuring out a process that many previous researchers have likely had to learn before us. While not comprehensive by any means, we hope that this tool can serve as an informative and useful guide for others wishing to utilize Fitbits in their research.
 
-The FitaParser pipeline is capable of producing data that is customizable to your output needs.
-
-  -Individual or aggregate data files.
-
-  -Daily or intra-day level data.
-
-  -Summary graphics of data.
-
-  -Output files aggregate all available Fitbit metrics:
+The FitaParser pipeline is capable of producing data that is customizable to your output needs.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Individual or aggregate data files.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Daily or intra-day level data.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Summary graphics of data.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Output files aggregate all available Fitbit metrics:
 
       Activity Types (+MVPA)​
       Activity Duration​
