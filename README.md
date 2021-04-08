@@ -67,7 +67,7 @@ Before starting on the steps below, you will need to create an excel database to
 
 *After your project app is registered and confirmed access to users' intraday data, and your Fitbit User Access Token Database is created, you can then move on to Steps 4-6.<br />
 
-#### STEP 4: GENERATE AUTHORIZATION URL LINK IN FITBIT APP
+### STEP 4: GENERATE AUTHORIZATION URL LINK IN FITBIT APP
 
 >*NOTE. Please see Fitbit's https://dev.fitbit.com/build/reference/web-api/oauth2/ website for additional information on the user authorization and API authentication process.
 
@@ -90,7 +90,7 @@ Before starting on the steps below, you will need to create an excel database to
 
 *Before completing STEP 5, ensure that you are logged OUT of your administrator Fitbit account. Also ensure that no one else is logged into Fitbit. We found it helpful to work in two separate browsers when switching between accounts.<br />
 
-#### STEP 5: IMPLEMENT PARTICIPANT USER CONSENT TO FITBIT APP
+### STEP 5: IMPLEMENT PARTICIPANT USER CONSENT TO FITBIT APP
 
 1. Go to fitbit.com.<br />
 2. Log into the Fitbit user/participant's account.<br />
@@ -120,7 +120,7 @@ Before starting on the steps below, you will need to create an excel database to
 
 *Again, before completing the STEP 6, ensure that you are logged OUT of the participant Fitbit account.<br />
 
-#### STEP 6: GENERATE USER ACCESS TOKEN IN FITBIT APP (Used to connect FitaParser to Fitbit app)
+### STEP 6: GENERATE USER ACCESS TOKEN IN FITBIT APP (Used to connect FitaParser to Fitbit app)
 
 1. Go to fitbit.com.<br />
 2. Log into your Fitbit administrator account.<br />
