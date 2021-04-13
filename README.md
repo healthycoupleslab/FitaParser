@@ -149,5 +149,99 @@ Before starting on the steps below, you will need to create an excel database to
 
 >*NOTE. Steps 4-6 can be completed in ~3-5mins per participant. We recommend incorporating this into device/account set-up process for each individual participant. Doing it this way is likely more time efficient, as completing the authorization process for dozens (if not hundreds) of participants at once could quickly add up to a significant chunk of time. Additionally, completing this process for multiple participants at once introduces increased possibility of human error in mixing up Fitbit accounts, authorization URLs, user ids, and tokens between participants.<br />
 
-
 ## Phase 2: Run the FitaParser Pipeline
+
+### Requirements
+
+If installed as recommended, the pipeline automatically handles the installation of required software. For reference, the following programs are used by FitaParser:
+
+    Snakemake (v5.14.0)
+    Java (OpenJDK v11.0.6)
+    Perl (tested with v5.26.2)
+    R (tested with v3.6.2)
+      "scales" and "ggplot2" packages
+
+The FitaParser pipeline should work on all modern operating systems and has been specifically tested on Ubuntu 18.04.4, OS X 10.15, and Windows 10 (using Windows Subsystem for Linux*).
+
+*For a great guide on installing WSL in Windows and setting up conda, see https://github.com/kapsakcj/win10-linux-conda-how-to
+
+While FitaParser is meant to be user-friendly and require limited prior computational experience, the initial steps do require executing commands from the command line. For those not accustomed to this procedure, refer to this excellent guide on basic Linux commands.
+
+### Conda Installation
+
+The recommended way to setup the FitaParser pipeline is via **conda** because it also enables any software dependencies to be easily installed.
+
+First, install the Miniconda Python3 distribution (download the latest version [here][id], making sure to download the Python3 version):  
+\
+`bash Miniconda3-latest-Linux-x86_64.sh`  
+\
+Answer 'yes' to the question about whether conda shall be put into your PATH. You can check that the installation was succesful by running:  
+\
+  `conda list`  
+\
+For a successful installation, a list of installed packages appears.
+
+### Prepare a Working Directory
+
+The FitaParser pipeline creates a number of intermediate and temporary files as different underlying tools are executed. In order to keep these files organized and separated from other FitaParser instances, we recommend creating **an indepedent working directory for each study associated with FitaParser**. While there are several ways to accomplish this, the easiest is to simply clone the FitaParser files from GitHub into a new directory for each independent meCLIP experiment.
+
+First, create a new directory in a reasonable place to use as your working directory.  
+\
+`mkdir study-name`  
+\
+Next, clone the FitaParser files from GitHub into that directory:
+\
+`git clone https://github.com/ajlabuc/meCLIP.git`  
+\
+
+### Create Conda Environment with Required Software
+
+The **environment.yaml** file that was downloaded from GitHub can be used to install all the software required by FitaParser into an isolated Conda environment. This ensures that the correct version of the software is utilized and any other dependencies are reconciled.
+
+The default Conda solver is a bit slow and sometimes has issues with selecting the latest package releases. Therefore, we recommend to install Mamba as a drop-in replacement via:
+\
+`conda install -c conda-forge mamba`
+\
+Then, to create an environment with the required software:  
+\
+`mamba env create --name FitaParser --file environment.yaml`  
+\
+Finally, to activate the meCLIP environment, execute:  
+\
+`conda activate FitaParser`  
+\
+To exit the environment once the analysis is complete, you can execute:  
+\
+`conda deactivate`  
+
+### Customizing Configuration File
+
+One of the few steps in the FitaParser analysis pipeline that actually requires opening a file is customizing the configuration file. This is where you inform the pipeline where relevant files are on your system, namely the database or user tokens generated in Phase 1 (above). A sample configuration file is included in the downloaded files and detailed below.
+
+```
+threads: 3
+
+study_name: study_name
+
+user_database: config/userTokens.tsv
+```
+
+* **threads:** defines the number of threads available to the pipeline (we recommend one less than the total number of usable CPU cores)
+
+* **study_name:** easily identifiable name of the study that FitaParser will analyze (this will be included in most of the file names and titles)  
+
+* **user_database:** specifies the location of the database file containg the user access tokens generated in Phase 1
+
+### Execute the Analysis Pipeline
+
+Once the location of the user database file are saved into the configuration file, FitaParser can then be executed simply by running the following command within the working directory (where 'N' is the number of CPU cores available to the pipeline):
+
+`snakemake --cores N`
+
+This will automatically retrieve participant Fitbit data and aggregate the individual user files into a  database containing all requested activity metrics, including intraday data. The resulting spreadsheet can then be imported into various analysis packages (SPSS, R, etc.) depending on the needs of the user.
+
+### Final Remarks
+
+By allowing Fitbit user data to be retrieved and analyzed at zero-cost and in a user-friendly manner, we feel this tool offers extreme value to any researcher interested in incorporating the use of Fitbit devices into their physical research.
+
+[id]: https://conda.io/en/latest/miniconda.html
