@@ -23,7 +23,7 @@ The FitaParser pipeline is capable of producing data that is customizable to you
 
 Broadly, the FitaParser workflow is a 2-phase process (see infographic below). The first phase requires creation of an application within the Fitbit Platform that is used to access the activity data of each study participant. The second phase involves running the FitaParser pipeline. The pipeline initiates retrieval of Fitbit activity data for the desired date range from all connected participants and aggregates this data into the desired, ready-to-use excel files.​<br />
 
-![workflow](https://user-images.githubusercontent.com/80790894/114198773-f098bc00-9910-11eb-80e9-5d136312c266.PNG)
+![workflow](images/workflow.PNG)
 
 Below are detailed instructions on how to execute the entire workflow. Please note that while the development of this workflow was made possible by one of our team members with background in computer science and bioinformatics, the purpose and application was driven by our work as behavioral health researchers; thus, the instructions that follow are written largely from that perspective with special consideration to potential challenges faced by behavioral and social science researchers. Throughout the workflow instructions, we have also included our additional thoughts and tips that may be helpful for some researchers who- like ourselves at the beginning of this project- are new to conducting research with consumer wearable devices. We welcome feedback on this tool to help improve usability- please feel free to provide constructive suggestions or inform us of issues encountered when utilizing FitaParser by dropping a comment under the Issues tab.<br />
 
