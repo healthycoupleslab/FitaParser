@@ -51,7 +51,7 @@ The first phase of the workflow is to generate the data source that the FitaPars
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d. Under "Default Access Type" select "Read & Write".<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e. Click Save.<br />
 
-![register app](https://user-images.githubusercontent.com/80790894/114198825-fee6d800-9910-11eb-93b1-c85bd2974c6a.PNG)
+![register app](images/register_app.PNG)
 
 ### STEP 2: SUBMIT REQUEST to FITBIT FOR INTRADAY DATA ACCESS
 
@@ -68,7 +68,7 @@ After registering your app, you will need to submit a request to Fitbit for your
 
 Before starting on the steps below, you will need to create an excel database to save and organize the user IDs and access tokens that you will be generating. Each token is unique for each participant and you will need it for steps throughout the authorization process, and these will be necessary during Phase 2 when configuring your FitaParser data file (linking FitaParser to your Fitbit app). See the screenshot below for an example of how we organized our excel file.<br />
 
-![token database](https://user-images.githubusercontent.com/80790894/114198858-073f1300-9911-11eb-9220-b6d5fc053f87.PNG)
+![token database](images/token_database.PNG)
 
 *After your project app is registered and confirmed access to users' intraday data, and your Fitbit User Access Token Database is created, you can then move on to Steps 4-6.<br />
 
@@ -81,7 +81,7 @@ Before starting on the steps below, you will need to create an excel database to
 3. Go to Manage > Register an App > Manage My Apps > select your project app.<br />
 4. At the bottom of this page, click the blue hyper-link titled "OAuth 2.0 tutorial page" (see example screenshot with the location of the hyperlink highlighted in yellow below).<br />
 
-![OAuth 2 0 tutorial page](https://user-images.githubusercontent.com/80790894/114198889-0f974e00-9911-11eb-9c3b-64a09af5c871.PNG)
+![OAuth 2 0 tutorial page](images/OAuth2.0_tutorial.PNG)
 
 5. On the next page, you will see two sections: 1. Authorize and 2. Parse Response.<br />
 6. Copy the blue hyper-link at the end of the Authorize section (i.e., the "authorization URL"- see example screenshot of authorization URL link in red brackets below) and paste it in your Fitbit User Access Token Database under the "Authorization URL" column in the row next to the participant who will be associated with that specific link.<br />
@@ -91,7 +91,7 @@ Before starting on the steps below, you will need to create an excel database to
 
 7. After you are sure that the above URL is correctly saved, log out of your administrator Fitbit account.<br />
 
-![authorization URL](https://user-images.githubusercontent.com/80790894/114198901-12923e80-9911-11eb-8494-5017e9d8735b.PNG)
+![authorization URL](images/authorization_url.PNG)
 
 *Before completing STEP 5, ensure that you are logged OUT of your administrator Fitbit account. Also ensure that no one else is logged into Fitbit. We found it helpful to work in two separate browsers when switching between accounts.<br />
 
@@ -109,7 +109,7 @@ Before starting on the steps below, you will need to create an excel database to
 3. Return to where you pasted the authorization URL for this specific participant in your Fitbit User Access Token Database.<br />
 4. Copy the URL and paste it into a NEW tab in the same browser that you used to log into the participant Fitbit account. This will take pull up the Fitbit user access authorization page (this is where the Fitbit user consents for your app to access their data). See example screenshot of this page below.<br />
 
-![user consent](https://user-images.githubusercontent.com/80790894/114198956-1de56a00-9911-11eb-94f7-33f2e3f3f197.PNG)
+![user consent](images/user_consent.PNG)
 
 5. Adjust the settings to select the amount of time that you want authorize your app access to the participant's Fitbit account.<br />
 
@@ -144,7 +144,7 @@ Before starting on the steps below, you will need to create an excel database to
 *NOTE. IT IS CRITICAL that you ensure each participant's USER ID & TOKEN are saved, as you will need these for Phase 2 in configuring the FitaParser pipeline (i.e., connecting FitaParser to your Fitbit app).<br />
 
 
-![parse response](https://user-images.githubusercontent.com/80790894/114198971-20e05a80-9911-11eb-91bc-7b7206f9a3d8.PNG)
+![parse response](images/parse_response.PNG)
 
 
 >*NOTE. Steps 4-6 can be completed in ~3-5mins per participant. We recommend incorporating this into device/account set-up process for each individual participant. Doing it this way is likely more time efficient, as completing the authorization process for dozens (if not hundreds) of participants at once could quickly add up to a significant chunk of time. Additionally, completing this process for multiple participants at once introduces increased possibility of human error in mixing up Fitbit accounts, authorization URLs, user ids, and tokens between participants.<br />
